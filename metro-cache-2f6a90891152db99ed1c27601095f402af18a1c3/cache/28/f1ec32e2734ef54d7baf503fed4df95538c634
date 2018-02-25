@@ -1,0 +1,79 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _reactNative = require(_dependencyMap[0], "react-native");
+
+  exports.default = _reactNative.StyleSheet.create({
+    container: {
+      marginTop: 100,
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+    title: {
+      fontSize: 22,
+      fontWeight: 'bold',
+      width: 220,
+      textAlign: 'center'
+    },
+    formContainer: {
+      marginTop: 20,
+      flex: 1
+    },
+    inputContainerStyle: {
+      width: 350,
+      borderColor: '#dadada',
+      borderWidth: 1,
+      height: 30,
+      paddingTop: 20,
+      paddingBottom: 20,
+      paddingRight: 30,
+      paddingLeft: 30,
+      marginTop: 20
+    },
+    inputStyle: {
+      fontSize: 13
+    },
+    buttonStyle: {
+      height: 45,
+      width: 350,
+      paddingRight: 20,
+      paddingLeft: 20,
+      borderColor: "transparent",
+      borderWidth: 0,
+      marginTop: 20
+    },
+    buttonContainerStyle: {
+      flex: 0
+    },
+    forgotPass: {
+      color: 'gray',
+      textAlign: 'right',
+      marginTop: 10
+    },
+    signUp: {
+      color: 'black',
+      paddingLeft: 5
+    },
+    socialIcon: {
+      backgroundColor: '#3b5998',
+      padding: 30
+    },
+    socialIconGoogle: {
+      padding: 30,
+      borderColor: 'gray',
+      borderWidth: 1
+    },
+    socialIcon_icons_facebook: {
+      fontSize: 30,
+      color: 'white'
+    },
+    socialIcon_icons_google: {
+      fontSize: 30,
+      color: 'black'
+    }
+  });
+});

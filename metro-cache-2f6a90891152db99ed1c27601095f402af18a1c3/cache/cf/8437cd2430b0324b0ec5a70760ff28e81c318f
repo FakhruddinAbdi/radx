@@ -1,0 +1,231 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = require(_dependencyMap[1], "./../../../react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+  var _jsxFileName = "/Users/fakhruddinabdi/Projects/archive/radxApp/node_modules/react-native-elements/src/input/Input.js";
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _propTypes = require(_dependencyMap[2], "prop-types");
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _reactNative = require(_dependencyMap[3], "react-native");
+
+  var _ViewPropTypes = require(_dependencyMap[4], "../config/ViewPropTypes");
+
+  var _ViewPropTypes2 = _interopRequireDefault(_ViewPropTypes);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    Input: {
+      displayName: "Input"
+    }
+  };
+
+  var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/Users/fakhruddinabdi/Projects/archive/radxApp/node_modules/react-native-elements/src/input/Input.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _reactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var SCREEN_WIDTH = _reactNative.Dimensions.get('window').width;
+
+  var Input = _wrapComponent("Input")(function (_Component) {
+    _inherits(Input, _Component);
+
+    function Input() {
+      _classCallCheck(this, Input);
+
+      return _possibleConstructorReturn(this, (Input.__proto__ || Object.getPrototypeOf(Input)).apply(this, arguments));
+    }
+
+    _createClass(Input, [{
+      key: "componentWillMount",
+      value: function componentWillMount() {
+        this.shake = this.shake.bind(this);
+        this.shakeAnimationValue = new _reactNative.Animated.Value(0);
+        this.props.shake && this.shake();
+      }
+    }, {
+      key: "focus",
+      value: function focus() {
+        this.input.focus();
+      }
+    }, {
+      key: "blur",
+      value: function blur() {
+        this.input.blur();
+      }
+    }, {
+      key: "clear",
+      value: function clear() {
+        this.input.clear();
+      }
+    }, {
+      key: "shake",
+      value: function shake() {
+        var shakeAnimationValue = this.shakeAnimationValue;
+        shakeAnimationValue.setValue(0);
+
+        _reactNative.Animated.timing(shakeAnimationValue, {
+          duration: 375,
+          toValue: 3,
+          ease: _reactNative.Easing.bounce
+        }).start();
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        var _this2 = this;
+
+        var _props = this.props,
+            containerStyle = _props.containerStyle,
+            icon = _props.icon,
+            iconContainerStyle = _props.iconContainerStyle,
+            inputStyle = _props.inputStyle,
+            displayError = _props.displayError,
+            errorStyle = _props.errorStyle,
+            errorMessage = _props.errorMessage,
+            attributes = _objectWithoutProperties(_props, ["containerStyle", "icon", "iconContainerStyle", "inputStyle", "displayError", "errorStyle", "errorMessage"]);
+
+        var translateX = this.shakeAnimationValue.interpolate({
+          inputRange: [0, 0.5, 1, 1.5, 2, 2.5, 3],
+          outputRange: [0, -15, 0, 15, 0, -15, 0]
+        });
+        return _react3.default.createElement(
+          _reactNative.View,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 68
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Animated.View,
+            {
+              style: [styles.container, {
+                width: SCREEN_WIDTH - 100,
+                height: 40
+              }, containerStyle, {
+                transform: [{
+                  translateX: translateX
+                }]
+              }],
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 69
+              }
+            },
+            icon && _react3.default.createElement(
+              _reactNative.View,
+              {
+                style: [styles.iconContainer, {
+                  height: 40
+                }, iconContainerStyle],
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 78
+                }
+              },
+              icon
+            ),
+            _react3.default.createElement(_reactNative.TextInput, _extends({
+              ref: function ref(input) {
+                return _this2.input = input;
+              },
+              underlineColorAndroid: "transparent",
+              style: [styles.input, {
+                width: SCREEN_WIDTH - 100,
+                height: 40
+              }, inputStyle]
+            }, attributes, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 83
+              }
+            }))
+          ),
+          displayError && _react3.default.createElement(
+            _reactNative.Text,
+            {
+              style: [styles.error, errorStyle && errorStyle],
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 95
+              }
+            },
+            errorMessage || 'Error!'
+          )
+        );
+      }
+    }]);
+
+    return Input;
+  }(_react2.Component));
+
+  Input.propTypes = {
+    containerStyle: _ViewPropTypes2.default.style,
+    icon: _propTypes2.default.object,
+    iconContainerStyle: _ViewPropTypes2.default.style,
+    inputStyle: _propTypes2.default.object,
+    shake: _propTypes2.default.any,
+    displayError: _propTypes2.default.bool,
+    errorStyle: _propTypes2.default.object,
+    errorMessage: _propTypes2.default.string
+  };
+
+  var styles = _reactNative.StyleSheet.create({
+    container: {
+      flexDirection: 'row',
+      borderBottomWidth: 1,
+      borderColor: 'rgba(171, 189, 219, 1)',
+      alignItems: 'center'
+    },
+    iconContainer: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginLeft: 15
+    },
+    input: {
+      alignSelf: 'center',
+      color: 'black',
+      fontSize: 18,
+      marginLeft: 10
+    },
+    error: {
+      color: '#FF2D00',
+      margin: 5,
+      fontSize: 12
+    }
+  });
+
+  exports.default = Input;
+});

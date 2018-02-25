@@ -1,0 +1,326 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = require(_dependencyMap[1], "./node_modules/react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _jsxFileName = "/Users/fakhruddinabdi/Projects/archive/radxApp/App.js";
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _reactNative = require(_dependencyMap[2], "react-native");
+
+  var _reactNativeElements = require(_dependencyMap[3], "react-native-elements");
+
+  var _FontAwesome = require(_dependencyMap[4], "@expo/vector-icons/FontAwesome");
+
+  var _FontAwesome2 = _interopRequireDefault(_FontAwesome);
+
+  var _styles = require(_dependencyMap[5], "./styles.js");
+
+  var _styles2 = _interopRequireDefault(_styles);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    App: {
+      displayName: "App"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/Users/fakhruddinabdi/Projects/archive/radxApp/App.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var App = _wrapComponent("App")(function (_React$Component) {
+    _inherits(App, _React$Component);
+
+    function App() {
+      var _ref;
+
+      var _temp, _this, _ret;
+
+      _classCallCheck(this, App);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+        focuse: [false, false],
+        loading: false
+      }, _this.inputFocusStyle = function (index, blur) {
+        var focuse = _this.state.focuse;
+        console.log('focuse', index, blur);
+        focuse[index] = blur ? false : true;
+
+        _this.setState({
+          focuse: focuse
+        });
+      }, _this.handleSubmit = function () {
+        _this.setState({
+          loading: true
+        });
+
+        setTimeout(function () {
+          _this.setState({
+            loading: false
+          });
+        }, 1000);
+      }, _this.handleForgotPass = function () {
+        console.log("Handle forgot pass pressed");
+      }, _this.handleSignup = function () {
+        console.log("Handle sign up");
+      }, _this.handleFbLogin = function () {
+        console.log("Handle facebook login");
+      }, _this.handleGoogleLogin = function () {
+        console.log("Handle google login");
+      }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(App, [{
+      key: "render",
+      value: function render() {
+        var _this2 = this;
+
+        var _state = this.state,
+            focuse = _state.focuse,
+            loading = _state.loading;
+        return _react3.default.createElement(
+          _reactNative.View,
+          {
+            style: _styles2.default.container,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 77
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            {
+              style: _styles2.default.title,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 78
+              }
+            },
+            " LOGIN TO YOUR EXISTING ACCOUNT "
+          ),
+          _react3.default.createElement(
+            _reactNative.View,
+            {
+              style: _styles2.default.formContainer,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 79
+              }
+            },
+            _react3.default.createElement(_reactNativeElements.Input, {
+              placeholder: "Email address or mobile number",
+              containerStyle: [_styles2.default.inputContainerStyle, focuse[0] ? {
+                borderColor: 'gray'
+              } : {
+                borderColor: '#dadada'
+              }],
+              inputStyle: _styles2.default.inputStyle,
+              onFocus: function onFocus() {
+                return _this2.inputFocusStyle(0);
+              },
+              onBlur: function onBlur() {
+                return _this2.inputFocusStyle(0, 'blur');
+              },
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 80
+              }
+            }),
+            _react3.default.createElement(_reactNativeElements.Input, {
+              placeholder: "Password",
+              containerStyle: [_styles2.default.inputContainerStyle, focuse[1] ? {
+                borderColor: 'gray'
+              } : {
+                borderColor: '#dadada'
+              }],
+              inputStyle: _styles2.default.inputStyle,
+              onFocus: function onFocus() {
+                return _this2.inputFocusStyle(1);
+              },
+              onBlur: function onBlur() {
+                return _this2.inputFocusStyle(1, 'blur');
+              },
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 90
+              }
+            }),
+            _react3.default.createElement(
+              _reactNative.TouchableOpacity,
+              {
+                onPress: this.handleForgotPass,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 100
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  style: _styles2.default.forgotPass,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 101
+                  }
+                },
+                "Forgot password ?"
+              )
+            ),
+            _react3.default.createElement(_reactNativeElements.Button, {
+              text: 'LOGIN',
+              loading: loading,
+              loadingProps: {
+                size: "large",
+                color: "rgba(111, 202, 186, 1)"
+              },
+              textStyle: {
+                fontWeight: "700"
+              },
+              buttonStyle: _styles2.default.buttonStyle,
+              containerStyle: _styles2.default.buttonContainerStyle,
+              onPress: this.handleSubmit,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 105
+              }
+            })
+          ),
+          _react3.default.createElement(
+            _reactNative.View,
+            {
+              style: {
+                flexDirection: 'row',
+                justifyContent: 'space-around',
+                width: 200
+              },
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 115
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.TouchableOpacity,
+              {
+                style: _styles2.default.socialIcon,
+                onPress: this.handleFbLogin,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 116
+                }
+              },
+              _react3.default.createElement(_FontAwesome2.default, {
+                style: _styles2.default.socialIcon_icons_facebook,
+                name: "facebook",
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 117
+                }
+              })
+            ),
+            _react3.default.createElement(
+              _reactNative.TouchableOpacity,
+              {
+                style: _styles2.default.socialIconGoogle,
+                onPress: this.handleGoogleLogin,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 119
+                }
+              },
+              _react3.default.createElement(_FontAwesome2.default, {
+                style: _styles2.default.socialIcon_icons_google,
+                name: "google",
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 120
+                }
+              })
+            )
+          ),
+          _react3.default.createElement(
+            _reactNative.View,
+            {
+              style: {
+                marginBottom: 200,
+                flexDirection: 'row',
+                marginTop: 20
+              },
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 123
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.Text,
+              {
+                style: {
+                  color: 'gray'
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 124
+                }
+              },
+              "Do you have an account?"
+            ),
+            _react3.default.createElement(
+              _reactNative.TouchableOpacity,
+              {
+                onPress: this.handleSignup,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 127
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  style: _styles2.default.signUp,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 128
+                  }
+                },
+                "Sign up now"
+              )
+            )
+          )
+        );
+      }
+    }]);
+
+    return App;
+  }(_react3.default.Component));
+
+  exports.default = App;
+});

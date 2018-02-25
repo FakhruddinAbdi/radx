@@ -1,0 +1,245 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = require(_dependencyMap[1], "./../../../react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+  var _jsxFileName = "/Users/fakhruddinabdi/Projects/archive/radxApp/node_modules/react-native-elements/src/buttons/Button.js";
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _propTypes = require(_dependencyMap[2], "prop-types");
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _reactNative = require(_dependencyMap[3], "react-native");
+
+  var _ViewPropTypes = require(_dependencyMap[4], "../config/ViewPropTypes");
+
+  var _ViewPropTypes2 = _interopRequireDefault(_ViewPropTypes);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    Button: {
+      displayName: "Button"
+    }
+  };
+
+  var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/Users/fakhruddinabdi/Projects/archive/radxApp/node_modules/react-native-elements/src/buttons/Button.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _reactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var Button = _wrapComponent("Button")(function (_Component) {
+    _inherits(Button, _Component);
+
+    function Button() {
+      _classCallCheck(this, Button);
+
+      return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
+    }
+
+    _createClass(Button, [{
+      key: "log",
+      value: function log() {
+        console.log('Please attach a method to this component');
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        var _props = this.props,
+            containerStyle = _props.containerStyle,
+            onPress = _props.onPress,
+            buttonStyle = _props.buttonStyle,
+            clear = _props.clear,
+            loading = _props.loading,
+            loadingStyle = _props.loadingStyle,
+            loadingProps = _props.loadingProps,
+            text = _props.text,
+            textStyle = _props.textStyle,
+            textProps = _props.textProps,
+            icon = _props.icon,
+            iconContainerStyle = _props.iconContainerStyle,
+            iconRight = _props.iconRight,
+            linearGradientProps = _props.linearGradientProps,
+            attributes = _objectWithoutProperties(_props, ["containerStyle", "onPress", "buttonStyle", "clear", "loading", "loadingStyle", "loadingProps", "text", "textStyle", "textProps", "icon", "iconContainerStyle", "iconRight", "linearGradientProps"]);
+
+        var Touchable = _reactNative.Platform.OS === 'android' ? _reactNative.TouchableNativeFeedback : _reactNative.TouchableOpacity;
+        var ButtonContainer = linearGradientProps ? require(_dependencyMap[5], "expo").LinearGradient : _reactNative.View;
+        return _react3.default.createElement(
+          _reactNative.View,
+          {
+            style: [styles.container, containerStyle],
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 49
+            }
+          },
+          _react3.default.createElement(
+            Touchable,
+            _extends({
+              onPress: onPress || this.log.bind(this),
+              underlayColor: clear && 'transparent',
+              activeOpacity: clear && 0,
+              style: {
+                borderRadius: buttonStyle && buttonStyle.borderRadius && buttonStyle.borderRadius || 3
+              }
+            }, attributes, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 50
+              }
+            }),
+            _react3.default.createElement(
+              ButtonContainer,
+              _extends({}, linearGradientProps, {
+                style: [styles.button, clear && {
+                  backgroundColor: 'transparent',
+                  elevation: 0
+                }, buttonStyle, linearGradientProps && {
+                  backgroundColor: 'transparent'
+                }],
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 63
+                }
+              }),
+              loading && _react3.default.createElement(_reactNative.ActivityIndicator, _extends({
+                animating: true,
+                style: [styles.loading, loadingStyle],
+                color: loadingProps && loadingProps.color || 'white',
+                size: loadingProps && loadingProps.size || 'small'
+              }, loadingProps, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 73
+                }
+              })),
+              !loading && icon && !iconRight && _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: [styles.iconContainer, iconContainerStyle],
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 83
+                  }
+                },
+                icon
+              ),
+              !loading && _react3.default.createElement(
+                _reactNative.Text,
+                _extends({
+                  style: [styles.text, textStyle]
+                }, textProps, {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 87
+                  }
+                }),
+                text || 'Welcome to\nReact Native Elements'
+              ),
+              !loading && icon && iconRight && _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: [styles.iconContainer, iconContainerStyle],
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 93
+                  }
+                },
+                icon
+              )
+            )
+          )
+        );
+      }
+    }]);
+
+    return Button;
+  }(_react2.Component));
+
+  Button.propTypes = {
+    text: _propTypes2.default.string,
+    textStyle: _reactNative.Text.propTypes.style,
+    textProps: _propTypes2.default.object,
+    buttonStyle: _ViewPropTypes2.default.style,
+    clear: _propTypes2.default.bool,
+    loading: _propTypes2.default.bool,
+    loadingStyle: _ViewPropTypes2.default.style,
+    loadingProps: _propTypes2.default.object,
+    onPress: _propTypes2.default.any,
+    containerStyle: _ViewPropTypes2.default.style,
+    icon: _propTypes2.default.object,
+    iconContainerStyle: _ViewPropTypes2.default.style,
+    iconRight: _propTypes2.default.bool,
+    linearGradientProps: _propTypes2.default.object
+  };
+
+  var styles = _reactNative.StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 30
+    },
+    button: _extends({
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 3
+    }, _reactNative.Platform.select({
+      ios: {
+        backgroundColor: '#007AFF'
+      },
+      android: {
+        elevation: 4,
+        backgroundColor: '#2196F3',
+        borderRadius: 2
+      }
+    })),
+    text: _extends({
+      color: 'white',
+      fontSize: 16,
+      textAlign: 'center',
+      padding: 8
+    }, _reactNative.Platform.select({
+      ios: {
+        fontSize: 18
+      },
+      android: {
+        fontWeight: '500'
+      }
+    })),
+    iconContainer: {
+      marginHorizontal: 5
+    }
+  });
+
+  exports.default = Button;
+});
